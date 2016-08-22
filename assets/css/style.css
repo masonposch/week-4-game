@@ -1,0 +1,11 @@
+/*body {
+	background-image: url("../images/starwarsship.png");
+	background-size: 100%;
+	color: white;
+}*/
+
+.character {
+	width: 100%;
+	height: auto;
+	color: white;
+}
