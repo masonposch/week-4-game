@@ -36,8 +36,6 @@ var character4 = {
 	points: 180
 };
 
-// var allCharacters = [firstCharacter, secondCharacter, thirdCharacter, fourthCharacter];
-
 
 var setNamesAndPoints = function() {
 	$("#firstCharacterName").html(character1.name);
@@ -56,6 +54,54 @@ var chooseCharacter = function() {
 	$("#firstCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(firstCharacter);
 		$("#enemiesAvailable").replaceWith(secondCharacter, thirdCharacter, fourthCharacter);
+		$("#secondCharacter").click(function(){
+			$("#defender").replaceWith(secondCharacter);
+		});
+		$("#thirdCharacter").click(function(){
+			$("#defender").replaceWith(thirdCharacter);
+		});
+		$("#fourthCharacter").click(function(){
+			$("#defender").replaceWith(fourthCharacter);
+		});
+	});
+	$("#secondCharacter").click(function(){
+		$("#chosenCharacter").replaceWith(secondCharacter);
+		$("#enemiesAvailable").replaceWith(firstCharacter, thirdCharacter, fourthCharacter);
+		$("#firstCharacter").click(function(){
+			$("#defender").replaceWith(firstCharacter);
+		});
+		$("#thirdCharacter").click(function(){
+			$("#defender").replaceWith(thirdCharacter);
+		});
+		$("#fourthCharacter").click(function(){
+			$("#defender").replaceWith(fourthCharacter);
+		});
+	});
+	$("#thirdCharacter").click(function(){
+		$("#chosenCharacter").replaceWith(thirdCharacter);
+		$("#enemiesAvailable").replaceWith(firstCharacter, secondCharacter, fourthCharacter);
+		$("#firstCharacter").click(function(){
+			$("#defender").replaceWith(firstCharacter);
+		});
+		$("#secondCharacter").click(function(){
+			$("#defender").replaceWith(secondCharacter);
+		});
+		$("#fourthCharacter").click(function(){
+			$("#defender").replaceWith(fourthCharacter);
+		});
+	});
+	$("#fourthCharacter").click(function(){
+		$("#chosenCharacter").replaceWith(fourthCharacter);
+		$("#enemiesAvailable").replaceWith(firstCharacter, secondCharacter, thirdCharacter);
+		$("#firstCharacter").click(function(){
+			$("#defender").replaceWith(firstCharacter);
+		});
+		$("#secondCharacter").click(function(){
+			$("#defender").replaceWith(secondCharacter);
+		});
+		$("#thirdCharacter").click(function(){
+			$("#defender").replaceWith(thirdCharacter);
+		});
 	});
 }
 
