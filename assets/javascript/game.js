@@ -1,63 +1,64 @@
+$(document).ready(function(){
+
 var attack = 8;
+console.log(attack);
 
 var attackIncrease = 1;
 
 var counterAttack = 25;
 
-var firstCharacter = document.getElementById("firstCharacter").value;
+// var firstCharacter = document.getElementById("firstCharacter");
+// console.log(firstCharacter);
 
-var secondCharacter = document.getElementById("secondCharacter").value;
+// var secondCharacter = document.getElementById("secondCharacter");
 
-var thirdCharacter = document.getElementById("thirdCharacter").value;
+// var thirdCharacter = document.getElementById("thirdCharacter");
 
-var fourthCharacter = document.getElementById("fourthCharacter").value;
+// var fourthCharacter = document.getElementById("fourthCharacter");
 
-var character1 = {
+var firstCharacter = {
 	name: "Obi Wan Kenobi",
 	points: 120
 };
 
-var character2 = {
+var secondCharacter = {
 	name: "Qui-Gon Jinn",
 	points: 100 
 };
 
-var character3 = {
+var thirdCharacter = {
 	name: "Kylo Ren",
 	points: 150
 };
 
-var character4 = {
+var fourthCharacter = {
 	name: "Darth Vader",
 	points: 180
 };
 
-var allCharacters = [firstCharacter, secondCharacter, thirdCharacter, fourthCharacter];
+// var allCharacters = [firstCharacter, secondCharacter, thirdCharacter, fourthCharacter];
 
 
 var setNamesAndPoints = function() {
-	$("#firstCharacterName").html(character1.name);
-	$("#firstCharacterPoints").html(character1.points);
-	$("#secondCharacterName").html(character2.name);
-	$("#secondCharacterPoints").html(character2.points);
-	$("#thirdCharacterName").html(character3.name);
-	$("#thirdCharacterPoints").html(character3.points);
-	$("#fourthCharacterName").html(character4.name);
-	$("#fourthCharacterPoints").html(character4.points);
+	$("#firstCharacterName").html(firstCharacter.name);
+	$("#firstCharacterPoints").html(firstCharacter.points);
+	$("#secondCharacterName").html(secondCharacter.name);
+	$("#secondCharacterPoints").html(secondCharacter.points);
+	$("#thirdCharacterName").html(thirdCharacter.name);
+	$("#thirdCharacterPoints").html(thirdCharacter.points);
+	$("#fourthCharacterName").html(fourthCharacter.name);
+	$("#fourthCharacterPoints").html(fourthCharacter.points);
 }
 
 setNamesAndPoints();
 
-var beginGame = function(){
-	$(allCharacters[0]).click(function(){
-		$("#chosenCharacter").appendTo(allCharacters[0]);
-	});
-}
-
-beginGame();
 
 
 
+
+
+
+});
 
 
 
