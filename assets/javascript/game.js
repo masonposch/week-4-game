@@ -12,22 +12,22 @@ var thirdCharacter = document.getElementById("thirdCharacter").value;
 
 var fourthCharacter = document.getElementById("fourthCharacter").value;
 
-firstCharacter = {
+var character1 = {
 	name: "Obi Wan Kenobi",
-	points: 120;
+	points: 120
 };
 
-secondCharacter = {
-	name: "QuiGon Jinn",
-	points: 100; 
+var character2 = {
+	name: "Qui-Gon Jinn",
+	points: 100 
 };
 
-thirdCharacter = {
-	name: "KyloRen",
+var character3 = {
+	name: "Kylo Ren",
 	points: 150
 };
 
-fourthCharacter = {
+var character4 = {
 	name: "Darth Vader",
 	points: 180
 };
@@ -35,6 +35,29 @@ fourthCharacter = {
 var allCharacters = [firstCharacter, secondCharacter, thirdCharacter, fourthCharacter];
 
 
-var beginGame = function(){
-
+var setNamesAndPoints = function() {
+	$("#firstCharacterName").html(character1.name);
+	$("#firstCharacterPoints").html(character1.points);
+	$("#secondCharacterName").html(character2.name);
+	$("#secondCharacterPoints").html(character2.points);
+	$("#thirdCharacterName").html(character3.name);
+	$("#thirdCharacterPoints").html(character3.points);
+	$("#fourthCharacterName").html(character4.name);
+	$("#fourthCharacterPoints").html(character4.points);
 }
+
+setNamesAndPoints();
+
+var beginGame = function(){
+	$(allCharacters[0]).click(function(){
+		$("#chosenCharacter").appendTo(allCharacters[0]);
+	});
+}
+
+beginGame();
+
+
+
+
+
+

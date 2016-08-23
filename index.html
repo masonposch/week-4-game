@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-	<script src="assets/javascript/game.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 
@@ -20,7 +21,7 @@
 
 		<div class="text-center col-xs-12 col-sm-12 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6"><!--Title columns-->
 
-			<h1>Star Wars RPG!</h1>
+			<h1 id="nameOfGame">Star Wars RPG!</h1>
 			
 		</div><!--End title columns-->
 		
@@ -32,7 +33,7 @@
 
 			<div class="row"><!--character name row-->
 
-				<h3 class="text-center">Obi Wan Kenobi</h3>
+				<h3 id="firstCharacterName" class="text-center">Obi Wan Kenobi</h3>
 				
 			</div><!--End character name row-->
 
@@ -40,7 +41,7 @@
 
 			<div class="row"><!--character power level row-->
 
-				<h6 class="text-center powerLever">500</h3>
+				<h6 id="firstCharacterPoints" class="text-center powerLever">500</h3>
 				
 			</div><!--End character power level row-->
 			
@@ -50,7 +51,7 @@
 
 			<div class="row"><!--character name row-->
 
-				<h3 class="text-center">Quigon Gin</h3>
+				<h3 id="secondCharacterName" class="text-center">Quigon Gin</h3>
 				
 			</div><!--End character name row-->
 
@@ -58,7 +59,7 @@
 
 			<div class="row"><!--character power level row-->
 
-				<h6 class="text-center powerLever">500</h6>
+				<h6 id="secondCharacterPoints" class="text-center powerLever">500</h6>
 				
 			</div><!--End character power level row-->
 			
@@ -68,7 +69,7 @@
 
 			<div class="row"><!--character name row-->
 
-				<h3 class="text-center">Kylo Ren</h3>
+				<h3 id="thirdCharacterName" class="text-center">Kylo Ren</h3>
 				
 			</div><!--End character name row-->
 
@@ -76,7 +77,7 @@
 
 			<div class="row"><!--character power level row-->
 
-				<h6 class="text-center powerLever">500</h6>
+				<h6 id="thirdCharacterPoints" class="text-center powerLever">500</h6>
 				
 			</div><!--End character power level row-->
 			
@@ -86,7 +87,7 @@
 
 			<div class="row"><!--character name row-->
 
-				<h3 class="text-center">Darth Vader</h3>
+				<h3 id="fourthCharacterName" class="text-center">Darth Vader</h3>
 				
 			</div><!--End character name row-->
 
@@ -94,7 +95,7 @@
 
 			<div class="row"><!--character power level row-->
 
-				<h6 class="text-center powerLever">500</h3>
+				<h6 id="fourthCharacterPoints" class="text-center powerLever">500</h3>
 				
 			</div><!--End character power level row-->
 			
@@ -118,7 +119,7 @@
 
 			<div class="row"><!--Chosen character placement row-->
 
-				<div class chosenCharacter col-xs-12 col-sm-12 col-md-12 col-lg-12><!--Chosen character placement column-->
+				<div id="chosenCharacter" class col-xs-12 col-sm-12 col-md-12 col-lg-12><!--Chosen character placement column-->
 
 					<!--THIS IS WHERE THE CHOSEN CHARACTER WILL BE PLACED-->
 					
