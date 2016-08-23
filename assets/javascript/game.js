@@ -7,31 +7,31 @@ var attackIncrease = 1;
 
 var counterAttack = 25;
 
-// var firstCharacter = document.getElementById("firstCharacter");
-// console.log(firstCharacter);
+var firstCharacter = document.getElementById("firstCharacter");
+console.log(firstCharacter);
 
-// var secondCharacter = document.getElementById("secondCharacter");
+var secondCharacter = document.getElementById("secondCharacter");
 
-// var thirdCharacter = document.getElementById("thirdCharacter");
+var thirdCharacter = document.getElementById("thirdCharacter");
 
-// var fourthCharacter = document.getElementById("fourthCharacter");
+var fourthCharacter = document.getElementById("fourthCharacter");
 
-var firstCharacter = {
+var character1 = {
 	name: "Obi Wan Kenobi",
 	points: 120
 };
 
-var secondCharacter = {
+var character2 = {
 	name: "Qui-Gon Jinn",
 	points: 100 
 };
 
-var thirdCharacter = {
+var character3 = {
 	name: "Kylo Ren",
 	points: 150
 };
 
-var fourthCharacter = {
+var character4 = {
 	name: "Darth Vader",
 	points: 180
 };
@@ -40,25 +40,32 @@ var fourthCharacter = {
 
 
 var setNamesAndPoints = function() {
-	$("#firstCharacterName").html(firstCharacter.name);
-	$("#firstCharacterPoints").html(firstCharacter.points);
-	$("#secondCharacterName").html(secondCharacter.name);
-	$("#secondCharacterPoints").html(secondCharacter.points);
-	$("#thirdCharacterName").html(thirdCharacter.name);
-	$("#thirdCharacterPoints").html(thirdCharacter.points);
-	$("#fourthCharacterName").html(fourthCharacter.name);
-	$("#fourthCharacterPoints").html(fourthCharacter.points);
+	$("#firstCharacterName").html(character1.name);
+	$("#firstCharacterPoints").html(character1.points);
+	$("#secondCharacterName").html(character2.name);
+	$("#secondCharacterPoints").html(character2.points);
+	$("#thirdCharacterName").html(character3.name);
+	$("#thirdCharacterPoints").html(character3.points);
+	$("#fourthCharacterName").html(character4.name);
+	$("#fourthCharacterPoints").html(character4.points);
 }
 
 setNamesAndPoints();
 
+var chooseCharacter = function() {
+	$("#firstCharacter").click(function(){
+		$("#chosenCharacter").replaceWith(firstCharacter);
+		$("#enemiesAvailable").replaceWith(secondCharacter, thirdCharacter, fourthCharacter);
+	});
+}
+
+chooseCharacter();
 
 
 
 
 
-
-});
+});//Ends jQuery document.ready()
 
 
 
