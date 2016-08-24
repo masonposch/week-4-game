@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 var attack = 8;
-console.log(attack);
 
 var attackIncrease = 1;
 
@@ -73,6 +72,12 @@ var chooseCharacter = function() {
 			$("#defender").replaceWith(secondCharacter);
 				$("button").click(function(){
 					$(secondCharacterPoints).html(character2.points - (attack*attackIncrease));
+					//MESS WITH THIS PART
+					attackIncrease++;
+					if(secondCharacterPoints > 0){
+						return;
+					}
+					//MESS WITH THIS PART
 				});
 		});
 		$("#thirdCharacter").click(function(){
