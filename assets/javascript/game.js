@@ -20,6 +20,14 @@ var chosen = document.getElementById("chosenCharacter");
 
 var defender = document.getElementById("defender");
 
+var firstCharacterPoints = document.getElementById("firstCharacterPoints");
+
+var secondCharacterPoints = document.getElementById("secondCharacterPoints");
+
+var thirdCharacterPoints = document.getElementById("thirdCharacterPoints");
+
+var fourthCharacterPoints = document.getElementById("fourthCharacterPoints");
+
 var character1 = {
 	name: "Obi Wan Kenobi",
 	points: 120
@@ -58,101 +66,101 @@ var chooseCharacter = function() {
 	$("#firstCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(firstCharacter);
 			$("button").click(function(){
-				$("#firstCharacterPoints").html(character1.points - counterAttack);
+				$(firstCharacterPoints).html(character1.points - counterAttack);
 			});
 		$("#enemiesAvailable").replaceWith(secondCharacter, thirdCharacter, fourthCharacter);
 		$("#secondCharacter").click(function(){
 			$("#defender").replaceWith(secondCharacter);
 				$("button").click(function(){
-					$("#secondCharacterPoints").html(character2.points - counterAttack);
+					$(secondCharacterPoints).html(character2.points - (attack*attackIncrease));
 				});
 		});
 		$("#thirdCharacter").click(function(){
 			$("#defender").replaceWith(thirdCharacter);
 				$("button").click(function(){
-					$("#thirdCharacterPoints").html(character3.points - counterAttack);
+					$(thirdCharacterPoints).html(character3.points - (attack*attackIncrease));
 				});
 		});
 		$("#fourthCharacter").click(function(){
 			$("#defender").replaceWith(fourthCharacter);
 				$("button").click(function(){
-					$("#fourthCharacterPoints").html(character4.points - counterAttack);
+					$(fourthCharacterPoints).html(character4.points - (attack*attackIncrease));
 				});
 		});
 	});
 	$("#secondCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(secondCharacter);
 			$("button").click(function(){
-					$("#secondCharacterPoints").html(character2.points - counterAttack);
+					$(secondCharacterPoints).html(character2.points - counterAttack);
 			});
 		$("#enemiesAvailable").replaceWith(firstCharacter, thirdCharacter, fourthCharacter);
 		$("#firstCharacter").click(function(){
 			$("#defender").replaceWith(firstCharacter);
 				$("button").click(function(){
-					$("#firstCharacterPoints").html(character1.points - counterAttack);
+					$(firstCharacterPoints).html(character1.points - (attack*attackIncrease));
 				});
 		});
 		$("#thirdCharacter").click(function(){
 			$("#defender").replaceWith(thirdCharacter);
 				$("button").click(function(){
-					$("#thirdCharacterPoints").html(character3.points - counterAttack);
+					$(thirdCharacterPoints).html(character3.points - (attack*attackIncrease));
 				});
 		});
 		$("#fourthCharacter").click(function(){
 			$("#defender").replaceWith(fourthCharacter);
 				$("button").click(function(){
-					$("#fourthCharacterPoints").html(character4.points - counterAttack);
+					$(fourthCharacterPoints).html(character4.points - (attack*attackIncrease));
 				});
 		});
 	});
 	$("#thirdCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(thirdCharacter);
 			$("button").click(function(){
-					$("#thirdCharacterPoints").html(character3.points - counterAttack);
+					$(thirdCharacterPoints).html(character3.points - counterAttack);
 			});
 		$("#enemiesAvailable").replaceWith(firstCharacter, secondCharacter, fourthCharacter);
 		$("#firstCharacter").click(function(){
 			$("#defender").replaceWith(firstCharacter);
 				$("button").click(function(){
-					$("#firstCharacterPoints").html(character1.points - counterAttack);
+					$(firstCharacterPoints).html(character1.points - (attack*attackIncrease));
 				});
 
 		});
 		$("#secondCharacter").click(function(){
 			$("#defender").replaceWith(secondCharacter);
 				$("button").click(function(){
-					$("#secondCharacterPoints").html(character2.points - counterAttack);
+					$(secondCharacterPoints).html(character2.points - (attack*attackIncrease));
 				});
 		});
 		$("#fourthCharacter").click(function(){
 			$("#defender").replaceWith(fourthCharacter);
 				$("button").click(function(){
-					$("#fourthCharacterPoints").html(character4.points - counterAttack);
+					$(fourthCharacterPoints).html(character4.points - (attack*attackIncrease));
 				});
 		});
 	});
 	$("#fourthCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(fourthCharacter);
 			$("button").click(function(){
-					$("#fourthCharacterPoints").html(character4.points - counterAttack);
+					$(fourthCharacterPoints).html(character4.points - counterAttack);
 			});
 		$("#enemiesAvailable").replaceWith(firstCharacter, secondCharacter, thirdCharacter);
 		$("#firstCharacter").click(function(){
 			$("#defender").replaceWith(firstCharacter);
 				$("button").click(function(){
-					$("#firstCharacterPoints").html(character1.points - counterAttack);
+					$(firstCharacterPoints).html(character1.points - (attack*attackIncrease));
 				});
 		});
 		$("#secondCharacter").click(function(){
 			$("#defender").replaceWith(secondCharacter);
 				$("button").click(function(){
-					$("#secondCharacterPoints").html(character2.points - counterAttack);
+					$(secondCharacterPoints).html(character2.points - (attack*attackIncrease));
 				});
 		});
 		$("#thirdCharacter").click(function(){
 			$("#defender").replaceWith(thirdCharacter);
 				$("button").click(function(){
-					$("#thirdCharacterPoints").html(character3.points - counterAttack);
+					$(thirdCharacterPoints).html(character3.points - (attack*attackIncrease));
 				});
 		});
 	});
@@ -160,13 +168,6 @@ var chooseCharacter = function() {
 
 chooseCharacter();
 
-// var startFight = function(){
-// 	$("button").click(function(){
-// 		$("#firstCharacterPoints").html(character1.points - counterAttack);
-// 	});
-// }
-
-// startFight();
 
 });//Ends jQuery document.ready()
 
