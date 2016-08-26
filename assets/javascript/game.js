@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 var attack = 8;
 
-var attackIncrease = 1;
+// var attackIncrease = 1;
 
 var counterAttack = 25;
 
@@ -47,6 +47,7 @@ var character4 = {
 	points: 180
 };
 
+var attackNumber;
 
 var setNamesAndPoints = function() {
 	$("#firstCharacterName").html(character1.name);
@@ -61,38 +62,43 @@ var setNamesAndPoints = function() {
 
 setNamesAndPoints();
 
-var chooseCharacter = function() {
+
+
+
+var firstScenario = function() {
+	attackNumber = 1;
 	$("#firstCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(firstCharacter);
-			$("button").click(function(){
-				$(firstCharacterPoints).html(character1.points - counterAttack);
-			});
+		$("button").click(function(){
+			$(firstCharacterPoints).html(character1.points - counterAttack);
+		});
 		$("#enemiesAvailable").replaceWith(secondCharacter, thirdCharacter, fourthCharacter);
 		$("#secondCharacter").click(function(){
 			$("#defender").replaceWith(secondCharacter);
-				$("button").click(function(){
-					$(secondCharacterPoints).html(character2.points - (attack*attackIncrease));
-					//MESS WITH THIS PART
-					attackIncrease++;
-					if(secondCharacterPoints > 0){
-						return;
-					}
-					//MESS WITH THIS PART
-				});
+			$("button").click(function(){
+				$(secondCharacterPoints).html(character2.points - attack * attackNumber);
+				attackNumber++;
+			});
 		});
 		$("#thirdCharacter").click(function(){
 			$("#defender").replaceWith(thirdCharacter);
-				$("button").click(function(){
-					$(thirdCharacterPoints).html(character3.points - (attack*attackIncrease));
-				});
+			$("button").click(function(){
+				$(thirdCharacterPoints).html(character3.points - (attack*attackIncrease));
+			});
 		});
 		$("#fourthCharacter").click(function(){
 			$("#defender").replaceWith(fourthCharacter);
-				$("button").click(function(){
-					$(fourthCharacterPoints).html(character4.points - (attack*attackIncrease));
-				});
+			$("button").click(function(){
+				$(fourthCharacterPoints).html(character4.points - (attack*attackIncrease));
+			});
 		});
 	});
+}
+
+
+
+var secondScenario = function() {
+var attackIncrease = 1;
 	$("#secondCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(secondCharacter);
 			$("button").click(function(){
@@ -118,6 +124,12 @@ var chooseCharacter = function() {
 				});
 		});
 	});
+}
+
+
+
+var thirdScenario = function() {
+var attackIncrease = 1;
 	$("#thirdCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(thirdCharacter);
 			$("button").click(function(){
@@ -144,6 +156,12 @@ var chooseCharacter = function() {
 				});
 		});
 	});
+}
+
+
+
+var fourthScenario = function() {
+var attackIncrease = 1;
 	$("#fourthCharacter").click(function(){
 		$("#chosenCharacter").replaceWith(fourthCharacter);
 			$("button").click(function(){
@@ -171,10 +189,18 @@ var chooseCharacter = function() {
 	});
 }
 
-chooseCharacter();
+firstScenario();
+secondScenario();
+thirdScenario();
+fourthScenario();
+
 
 
 });//Ends jQuery document.ready()
 
 
+
+// $(".characters").on("click", function(){
+// 			$(this)
+// 		})
 
