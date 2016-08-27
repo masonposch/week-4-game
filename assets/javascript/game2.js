@@ -91,8 +91,12 @@ function theAttack(){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
 					if(character2.points -= newAttack <= 0){
-						alert("You win");
-						$("#defender").detach(secondCharacter);
+						alert("This round is yours!");
+						$(secondCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});		
 					} else{
 						return;
 					}
@@ -101,7 +105,7 @@ function theAttack(){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(thirdCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -115,7 +119,7 @@ function theAttack(){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
 					if(character4.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(fourthCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -137,7 +141,7 @@ function theAttack(){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(firstCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -151,7 +155,7 @@ function theAttack(){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(thirdCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -165,7 +169,7 @@ function theAttack(){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
 					if(character4.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(fourthCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -187,7 +191,7 @@ function theAttack(){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(firstCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -201,7 +205,7 @@ function theAttack(){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
 					if(character2.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(secondCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -215,7 +219,7 @@ function theAttack(){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
 					if(character4.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(fourthCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -237,7 +241,7 @@ function theAttack(){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(firstCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -251,7 +255,7 @@ function theAttack(){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
 					if(character2.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(secondCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);
@@ -265,7 +269,7 @@ function theAttack(){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
-						alert("You win");
+						alert("This round is yours!");
 						$(thirdCharacter).remove();
 						$(".characters").on('click', function(){
 							$("#defender").append(this);

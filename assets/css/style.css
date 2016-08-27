@@ -1,11 +1,38 @@
-/*body {
+body {
 	background-image: url("../images/starwarsship.png");
 	background-size: 100%;
-	color: white;
-}*/
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
 
 .character {
 	width: 100%;
 	height: auto;
 	color: white;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+}
+
+.characters {
+	color: #fff;
+}
+
+#theTitle {
+	color: #fff;
+}
+
+#yourCharacter {
+	color: #fff;
+}
+
+#fightSection {
+	color: #fff;
+}
+
+#theDefender {
+	color: #fff;
 }
