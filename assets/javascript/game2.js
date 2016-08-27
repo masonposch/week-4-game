@@ -80,27 +80,50 @@ $('button').on('click', theAttack);
 
 function theAttack(){
 		attackIncrease++;
-		var newCounterAttack = counterAttack*attackIncrease;
 		var newAttack = attack*attackIncrease;
 		if(choices[0] === firstCharacter){
 			$("#firstCharacterPoints").html(character1.points - counterAttack * attackIncrease);
 			if(character1.points - counterAttack * attackIncrease <= 0){
 				alert("You lose");
+				window.location.reload();
 			} else {
 				if(choices[1] === secondCharacter){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
-					return;
+					if(character2.points -= newAttack <= 0){
+						alert("You win");
+						$("#defender").detach(secondCharacter);
+					} else{
+						return;
+					}
 				}
 				else if(choices[1] === thirdCharacter){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
-					return;
+					if(character3.points - newAttack <= 0){
+						alert("You win");
+						$(thirdCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				} 
 				else if(choices[1] === fourthCharacter){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
-					return;
+					if(character4.points - newAttack <= 0){
+						alert("You win");
+						$(fourthCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 			}
 		}
@@ -108,21 +131,49 @@ function theAttack(){
 			$("#secondCharacterPoints").html(character2.points - counterAttack * attackIncrease);
 			if(character2.points - counterAttack * attackIncrease <= 0){
 				alert("You lose");
+				window.location.reload();
 			} else {
 				if(choices[1] === firstCharacter){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
-					return;
+					if(character1.points - newAttack <= 0){
+						alert("You win");
+						$(firstCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 				else if(choices[1] === thirdCharacter){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
-					return;
+					if(character3.points - newAttack <= 0){
+						alert("You win");
+						$(thirdCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				} 
 				else if(choices[1] === fourthCharacter){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
-					return;
+					if(character4.points - newAttack <= 0){
+						alert("You win");
+						$(fourthCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 			}
 		}
@@ -130,21 +181,49 @@ function theAttack(){
 			$("#thirdCharacterPoints").html(character3.points - counterAttack * attackIncrease);
 			if(character3.points - counterAttack * attackIncrease <= 0){
 				alert("You lose");
+				window.location.reload();
 			} else{
 				if(choices[1] === firstCharacter){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
-					return;
+					if(character1.points - newAttack <= 0){
+						alert("You win");
+						$(firstCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 				else if(choices[1] === secondCharacter){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
-					return;
+					if(character2.points - newAttack <= 0){
+						alert("You win");
+						$(secondCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				} 
 				else if(choices[1] === fourthCharacter){
 					$("#fourthCharacterPoints").html(character4.points - newAttack);
 					character4.points -= newAttack;
-					return;
+					if(character4.points - newAttack <= 0){
+						alert("You win");
+						$(fourthCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 			}
 		} 
@@ -152,26 +231,55 @@ function theAttack(){
 			$("#fourthCharacterPoints").html(character4.points - counterAttack * attackIncrease);
 			if(character4.points - counterAttack * attackIncrease <= 0){
 				alert("You lose");
+				window.location.reload();
 			} else {
 				if(choices[1] === firstCharacter){
 					$("#firstCharacterPoints").html(character1.points - newAttack);
 					character1.points -= newAttack;
-					return;
+					if(character1.points - newAttack <= 0){
+						alert("You win");
+						$(firstCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 				else if(choices[1] === secondCharacter){
 					$("#secondCharacterPoints").html(character2.points - newAttack);
 					character2.points -= newAttack;
-					return;
+					if(character2.points - newAttack <= 0){
+						alert("You win");
+						$(secondCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				} 
 				else if(choices[1] === thirdCharacter){
 					$("#thirdCharacterPoints").html(character3.points - newAttack);
 					character3.points -= newAttack;
-					return;
+					if(character3.points - newAttack <= 0){
+						alert("You win");
+						$(thirdCharacter).remove();
+						$(".characters").on('click', function(){
+							$("#defender").append(this);
+							return;
+						});
+					} else{
+						return;
+					}
 				}
 			}
 		}
 }
 theAttack();
+
 
 
 });//Ends jQuery document.ready()
