@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+var initiateGame = function(){
+
 var attack = 8;
 
 var attackIncrease = 0;
@@ -83,6 +85,7 @@ function theAttack(){
 		var newAttack = attack*attackIncrease;
 		if(choices[0] === firstCharacter){
 			$("#firstCharacterPoints").html(character1.points - counterAttack * attackIncrease);
+			// $("#fightDescription1").html("Obi Wan recieved 25 points damage");
 			if(character1.points - counterAttack * attackIncrease <= 0){
 				alert("You lose");
 				window.location.reload();
@@ -92,11 +95,12 @@ function theAttack(){
 					character2.points -= newAttack;
 					if(character2.points -= newAttack <= 0){
 						alert("This round is yours!");
-						$(secondCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});		
+						// $(secondCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();		
 					} else{
 						return;
 					}
@@ -106,11 +110,12 @@ function theAttack(){
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(thirdCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(thirdCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -121,10 +126,11 @@ function theAttack(){
 					if(character4.points - newAttack <= 0){
 						alert("This round is yours!");
 						$(fourthCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -142,11 +148,12 @@ function theAttack(){
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(firstCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(firstCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -156,11 +163,12 @@ function theAttack(){
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(thirdCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(thirdCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -170,11 +178,12 @@ function theAttack(){
 					character4.points -= newAttack;
 					if(character4.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(fourthCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(fourthCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -192,11 +201,12 @@ function theAttack(){
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(firstCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(firstCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -206,11 +216,12 @@ function theAttack(){
 					character2.points -= newAttack;
 					if(character2.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(secondCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(secondCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -220,11 +231,12 @@ function theAttack(){
 					character4.points -= newAttack;
 					if(character4.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(fourthCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(fourthCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -242,11 +254,12 @@ function theAttack(){
 					character1.points -= newAttack;
 					if(character1.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(firstCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(firstCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -257,10 +270,11 @@ function theAttack(){
 					if(character2.points - newAttack <= 0){
 						alert("This round is yours!");
 						$(secondCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+						window.location.reload();
 					} else{
 						return;
 					}
@@ -270,11 +284,12 @@ function theAttack(){
 					character3.points -= newAttack;
 					if(character3.points - newAttack <= 0){
 						alert("This round is yours!");
-						$(thirdCharacter).remove();
-						$(".characters").on('click', function(){
-							$("#defender").append(this);
-							return;
-						});
+						// $(thirdCharacter).remove();
+						// $(".characters").on('click', function(){
+						// 	$("#defender").append(this);
+						// 	return;
+						// });
+					window.location.reload();	
 					} else{
 						return;
 					}
@@ -283,6 +298,10 @@ function theAttack(){
 		}
 }
 theAttack();
+
+}
+
+initiateGame();
 
 
 
